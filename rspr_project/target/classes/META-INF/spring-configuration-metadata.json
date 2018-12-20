@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "",
+      "type": "hykar.projects.rspr.config.SecurityConfigurationRepository",
+      "sourceType": "hykar.projects.rspr.config.SecurityConfigurationRepository"
+    }
+  ],
+  "properties": [
+    {
+      "name": "security-properties",
+      "type": "java.util.Properties",
+      "sourceType": "hykar.projects.rspr.config.SecurityConfigurationRepository"
+    }
+  ],
+  "hints": []
+}
