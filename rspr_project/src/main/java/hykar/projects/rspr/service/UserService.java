@@ -117,4 +117,8 @@ public class UserService implements UserDetailsService {
         informationRepository.save(information);
         user.setInformation(information);
     }
+
+    public void updateUser(User thUser) {
+        userRepository.save(thUser);
+    }
 }

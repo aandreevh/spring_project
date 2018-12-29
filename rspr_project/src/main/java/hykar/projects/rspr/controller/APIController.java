@@ -1,18 +1,20 @@
 package hykar.projects.rspr.controller;
 
 import hykar.projects.rspr.entity.PersonalInformation;
+import hykar.projects.rspr.entity.Post;
 import hykar.projects.rspr.entity.User;
+import hykar.projects.rspr.enums.Role;
+import hykar.projects.rspr.service.PostService;
 import hykar.projects.rspr.service.TokenService;
 import hykar.projects.rspr.service.UserService;
 import hykar.projects.rspr.utils.ServiceResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.awt.*;
-import java.io.Serializable;
 import java.util.Optional;
 
 @RestController
@@ -24,6 +26,9 @@ public class APIController {
 
     @Autowired
     private TokenService tokenService;
+
+    @Autowired
+    private PostService postService;
 
 
     @GetMapping("/api/user")
@@ -55,7 +60,7 @@ public class APIController {
 
     }
 
-    @DeleteMapping("/api/user")
+    @DeleteMapping("/api/user/")
     @Secured({"ROLE_ADMIN"})
     public Object apiRemoveUser(@RequestParam("username") String username)
     {
@@ -109,10 +114,91 @@ public class APIController {
         User currentUser = userService.getCurrentUser().get();
 
 
-            userService.updateUserInformation(currentUser,information);
+        userService.updateUserInformation(currentUser,information);
 
-            return ServiceResponse.message("Information updated successfully.");
+        return ServiceResponse.message("Information updated successfully.");
 
     }
+
+    @PostMapping("/api/user/role")
+    @Secured({"ROLE_USER","ROLE_ADMIN"})
+    public Object apiSetUserRole(@RequestParam(name="id") long id,@RequestParam(name="role") String roleName)
+    {
+     Optional<Role> role = Role.resolveRole(roleName);
+     Optional<User> user = userService.getUser(id);
+
+     if(!role.isPresent() || !user.isPresent())
+         return ServiceResponse.error("Invalid username and role information.");
+
+     if(user.get().getId() == userService.getCurrentUser().get().getId())
+         return ServiceResponse.error("Cannot change your own role.");
+
+     User thUser = user.get();
+     thUser.setRole(role.get().getRoleName());
+
+     userService.updateUser(thUser);
+
+     return ServiceResponse.message("Role updated successfuly.");
+
+    }
+
+    @GetMapping("/api/post")
+    @Secured({"ROLE_USER","ROLE_ADMIN"})
+    public Object apiGetPosts(@RequestParam(required = false) String username,
+                              @RequestParam(required = false) String tag)
+    {
+        if(username != null)
+            return postService.getPostsByUsername(username);
+
+        if(tag != null)
+            return postService.getPostsByTag(tag);
+
+        return postService.getAllPosts();
+    }
+
+    @PostMapping("/api/post/")
+    @Secured({"ROLE_USER","ROLE_ADMIN"})
+    public Object apiEditPost(@RequestParam(name="id") long id,
+                              @RequestParam(required = false)String message,@RequestParam(required = false)String tags)
+    {
+        User currentUser = userService.getCurrentUser().get();
+        Optional<Post> oPost =  postService.getPostById(id);
+
+        if(!oPost.isPresent()) return ServiceResponse.error("Post not found.");
+
+        Post post = oPost.get();
+
+        if(currentUser.getRole().equals("ROLE_ADMIN") || post.getUser().getId() == currentUser.getId())
+        {
+         if(message !=null)post.setMessage(message);
+         if(tags !=null)post.setTags(tags);
+
+         return postService.savePost(post);
+        }
+
+        return ServiceResponse.error("You cannot edit this post.");
+    }
+
+    @DeleteMapping("/api/post/")
+    @Secured({"ROLE_ADMIN","ROLE_USER"})
+    public Object apiDeletePost(@RequestParam(name="id") long id)
+    {
+        User currentUser = userService.getCurrentUser().get();
+        Optional<Post> oPost =  postService.getPostById(id);
+
+        if(!oPost.isPresent()) return ServiceResponse.error("Post not found.");
+
+        Post post = oPost.get();
+
+        if(currentUser.getRole().equals("ROLE_ADMIN") || post.getUser().getId() == currentUser.getId())
+        {
+            postService.deletePost(post);
+            return ServiceResponse.message("Post deleted.");
+        }
+
+        return ServiceResponse.error("You cannot delete this post.");
+    }
+
+
 
 }

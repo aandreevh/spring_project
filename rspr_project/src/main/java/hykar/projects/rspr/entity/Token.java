@@ -1,6 +1,7 @@
 package hykar.projects.rspr.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
@@ -18,9 +19,9 @@ public class Token {
     @Column
     private int type;
 
-    @OneToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user")
-    @JsonIgnore
+    @JsonIgnoreProperties
     private User user;
 
     public long getId() {

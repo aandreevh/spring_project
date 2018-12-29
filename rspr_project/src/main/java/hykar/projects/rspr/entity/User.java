@@ -1,12 +1,16 @@
 package hykar.projects.rspr.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.LinkedList;
 
 @Entity
 @Table(name="user")
@@ -18,6 +22,7 @@ public class User implements UserDetails {
     @Column(unique = true,nullable = false)
     private String username;
     @Column(nullable = false)
+    @JsonIgnore
     private String password;
     @Column(nullable = false)
     private String role;
@@ -26,6 +31,10 @@ public class User implements UserDetails {
 
     @OneToOne(mappedBy = "user",fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
     private PersonalInformation information;
+
+    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    Collection<Post> posts = new LinkedList<>();
 
 
     public void setId(long id) {
@@ -107,5 +116,14 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return activated;
+    }
+
+    public Collection<Post> getPosts() {
+        return posts;
+    }
+
+    public void addPost(Post post) {
+        post.setUser(this);
+        this.posts.add(post);
     }
 }

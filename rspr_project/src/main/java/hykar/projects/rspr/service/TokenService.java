@@ -66,6 +66,7 @@ public class TokenService {
         }
         return new String(hexChars);
     }
+
     public Token generateToken(User user,TokenType type)
     {
         SecureRandom random = new SecureRandom();

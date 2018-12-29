@@ -1,5 +1,7 @@
 package hykar.projects.rspr.enums;
 
+import java.util.Optional;
+
 public enum Role {
 
     ROLE_USER("ROLE_USER"),
@@ -16,13 +18,13 @@ public enum Role {
         return roleName;
     }
 
-    public static Role resolveRole(String roleName){
+    public static Optional<Role> resolveRole(String roleName){
         for (Role r : Role.values())
         {
             if(r.getRoleName().equals(roleName.toUpperCase()))
-                return r;
+                return Optional.of(r);
         }
-        return null;
+        return Optional.empty();
     }
 
 }
