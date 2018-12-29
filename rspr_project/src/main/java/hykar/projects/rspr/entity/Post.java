@@ -25,7 +25,7 @@ public class Post {
     @JsonIgnore
     User user;
 
-    @OneToMany(mappedBy = "post")
+    @OneToMany(mappedBy = "post",cascade = CascadeType.REMOVE,fetch = FetchType.LAZY)
     @JsonIgnore
     private Collection<Comment> comments;
 

@@ -1,5 +1,6 @@
 package hykar.projects.rspr.controller;
 
+import hykar.projects.rspr.entity.Comment;
 import hykar.projects.rspr.entity.PersonalInformation;
 import hykar.projects.rspr.entity.Post;
 import hykar.projects.rspr.entity.User;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Objects;
 import java.util.Optional;
 
 @RestController
@@ -60,7 +62,7 @@ public class APIController {
 
     }
 
-    @DeleteMapping("/api/user/")
+    @DeleteMapping("/api/user")
     @Secured({"ROLE_ADMIN"})
     public Object apiRemoveUser(@RequestParam("username") String username)
     {
@@ -68,9 +70,11 @@ public class APIController {
 
         if(!user.isPresent()) return ServiceResponse.error("User does not exist.");
 
-        if(userService.removeUser(user.get())) return ServiceResponse.message("User removed successfuly.");
+        userService.removeUser(user.get());
 
-        return  ServiceResponse.error("Could not remove user.");
+
+        return ServiceResponse.message("User removed successfuly.");
+
     }
 
 
@@ -156,7 +160,8 @@ public class APIController {
         return postService.getAllPosts();
     }
 
-    @PostMapping("/api/post/")
+
+    @PostMapping("/api/post")
     @Secured({"ROLE_USER","ROLE_ADMIN"})
     public Object apiEditPost(@RequestParam(name="id") long id,
                               @RequestParam(required = false)String message,@RequestParam(required = false)String tags)
@@ -179,7 +184,22 @@ public class APIController {
         return ServiceResponse.error("You cannot edit this post.");
     }
 
-    @DeleteMapping("/api/post/")
+    @PostMapping("/api/post/add")
+    @Secured({"ROLE_ADMIN","ROLE_USER"})
+    public Object apiAddPost(@RequestBody String message)
+    {
+        User currentUser = userService.getCurrentUser().get();
+        Post p = new Post();
+
+        p.setUser(currentUser);
+        p.setMessage(message);
+        p.setTags("");
+
+        return postService.savePost(p);
+
+    }
+
+    @DeleteMapping("/api/post")
     @Secured({"ROLE_ADMIN","ROLE_USER"})
     public Object apiDeletePost(@RequestParam(name="id") long id)
     {
@@ -197,6 +217,82 @@ public class APIController {
         }
 
         return ServiceResponse.error("You cannot delete this post.");
+    }
+
+    @GetMapping("/api/comment")
+    @Secured({"ROLE_USER","ROLE_ADMIN"})
+    public Object apiGetComments(@RequestParam("post") long postId)
+    {
+        Optional<Post> oPost = postService.getPostById(postId);
+
+        if(!oPost.isPresent()) return ServiceResponse.message("Post not found.");
+
+        Post p = oPost.get();
+
+        return p.getComments();
+    }
+
+    @PostMapping("/api/comment")
+    @Secured({"ROLE_USER","ROLE_ADMIN"})
+    public Object apiEditComment(@RequestParam("id") long id,@RequestBody String message)
+    {
+        User user = userService.getCurrentUser().get();
+        Optional<Comment> oComment = postService.getCommentById(id);
+
+        if(!oComment.isPresent()) return ServiceResponse.message("Comment not found.");
+
+        Comment comment = oComment.get();
+
+        if(user.getRole().equals("ROLE_ADMIN") || comment.getUser().getId() == user.getId())
+        {
+            comment.setMessage(message);
+            postService.saveComment(comment);
+
+            return ServiceResponse.message("Comment edited.");
+        }
+
+        return ServiceResponse.error("You cannot edit this comment.");
+    }
+
+    @DeleteMapping("/api/comment")
+    @Secured({"ROLE_USER","ROLE_ADMIN"})
+    public Object apiDeleteComment(@RequestParam("id") long id)
+    {
+        User user = userService.getCurrentUser().get();
+        Optional<Comment> oComment = postService.getCommentById(id);
+
+        if(!oComment.isPresent()) return ServiceResponse.message("Comment not found.");
+
+        Comment comment = oComment.get();
+
+        if(user.getRole().equals("ROLE_ADMIN") || comment.getUser().getId() == user.getId())
+        {
+
+            postService.deleteComment(comment);
+            return ServiceResponse.message("Comment deleted.");
+        }
+
+        return ServiceResponse.error("You cannot delete this comment.");
+    }
+
+    @PostMapping("/api/comment/add")
+    @Secured({"ROLE_USER","ROLE_ADMIN"})
+    public Object apiAddComment(@RequestParam("post") long postId,@Valid @RequestBody String message)
+    {
+        Optional<Post> oPost = postService.getPostById(postId);
+
+        if(!oPost.isPresent()) return ServiceResponse.message("Post not found.");
+
+        Post p = oPost.get();
+        User currentUser = userService.getCurrentUser().get();
+
+        Comment c = new Comment();
+
+        c.setUser(currentUser);
+        c.setPost(p);
+        c.setMessage(message);
+
+        return postService.saveComment(c);
     }
 
 

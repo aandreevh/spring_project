@@ -63,12 +63,10 @@ public class UserService implements UserDetailsService {
         return userRepository.findByUsername(username);
     }
 
-    public boolean removeUser(User u)
+    public void removeUser(User u)
     {
         tokenService.removeTokens(u);
         userRepository.delete(u);
-
-        return true;
     }
 
 

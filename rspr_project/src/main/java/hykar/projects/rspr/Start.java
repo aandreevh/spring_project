@@ -2,6 +2,7 @@ package hykar.projects.rspr;
 
 import hykar.projects.rspr.compiler.MessageCompiler;
 import hykar.projects.rspr.compiler.handler.HtmlImageHandler;
+import hykar.projects.rspr.entity.Comment;
 import hykar.projects.rspr.entity.Post;
 import hykar.projects.rspr.entity.User;
 import hykar.projects.rspr.repository.PersonalInformationRepository;
@@ -21,7 +22,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Collection;
-import java.util.Collections;
 
 @SpringBootApplication
 @Controller
@@ -35,6 +35,7 @@ public class Start {
 
     @Autowired
     private PersonalInformationRepository informationRepository;
+
 
     public static void main(String... args)
     {
@@ -58,11 +59,16 @@ public class Start {
     public String index(Model model)
     {
         String out="";
-        Collection<Post> posts = postService.getPostsByTag("1");
+        Collection<Post> posts = postService.getPostsByTag("bla");
 
         for (Post p : posts)
         {
-            out = out+p.getMessage()+"\n";
+            for(Comment c : p.getComments())
+            {
+
+                out = out+c.getMessage()+"\n";
+
+            }
         }
 
         out = out+posts.size();

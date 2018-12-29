@@ -1,10 +1,12 @@
 package hykar.projects.rspr.service;
 
 import hykar.projects.rspr.compiler.MessageCompiler;
+import hykar.projects.rspr.entity.Comment;
 import hykar.projects.rspr.entity.Post;
 import hykar.projects.rspr.repository.CommentRepository;
 import hykar.projects.rspr.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
@@ -23,11 +25,9 @@ public class PostService {
     @Autowired
     private CommentRepository commentRepository;
 
-    @Bean
-    private MessageCompiler getMessageCompailer()
-    {
-        return MessageCompiler.createDefault();
-    }
+    @Autowired
+    @Qualifier("message-compiler")
+    private MessageCompiler messageCompiler;
 
     public Collection<Post> getPostsByTag( String tag)
     {
@@ -55,9 +55,13 @@ public class PostService {
         return postRepository.save(p);
     }
 
-    public void deletePost(Post p)
-    {
-        postRepository.delete(p);
-    }
+    public void deletePost(Post p) { postRepository.delete(p); }
 
+    public Comment saveComment(Comment c){ return commentRepository.save(c); }
+
+    public void deleteComment(Comment c){ commentRepository.delete(c);}
+
+    public Optional<Comment> getCommentById(long id) {
+        return commentRepository.findById(id);
+    }
 }
