@@ -8,9 +8,9 @@ public class HtmlImageHandler implements MessageHandler {
 
         StringBuilder builder = new StringBuilder("<img");
 
-        for (String key:
-             arguments.keySet())
-            builder.append(" "+key+"=\""+arguments.get(key)+"\"");
+        for (String key :
+                arguments.keySet())
+            builder.append(" " + key + "=\"" + arguments.get(key) + "\"");
 
         builder.append(">");
 

@@ -1,7 +1,7 @@
 package hykar.projects.rspr.entity;
 
 
-import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -21,11 +21,11 @@ public class Post {
     String tags;
 
     @ManyToOne
-    @JoinColumn(name="user")
+    @JoinColumn(name = "user")
     @JsonIgnore
     User user;
 
-    @OneToMany(mappedBy = "post",cascade = CascadeType.REMOVE,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "post", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
     @JsonIgnore
     private Collection<Comment> comments;
 
@@ -37,8 +37,7 @@ public class Post {
         this.comments = comments;
     }
 
-    public void addComment(Comment c)
-    {
+    public void addComment(Comment c) {
         c.setPost(this);
         this.comments.add(c);
     }
@@ -74,10 +73,6 @@ public class Post {
     public void setUser(User user) {
         this.user = user;
     }
-
-
-
-
 
 
 }

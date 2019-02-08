@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.Collection;
 import java.util.Optional;
 
-public interface TokenRepository extends CrudRepository<Token,Long> {
+public interface TokenRepository extends CrudRepository<Token, Long> {
 
     @Query("SELECT t from Token t WHERE t.token = :token")
     Optional<Token> getToken(@Param("token") String token);

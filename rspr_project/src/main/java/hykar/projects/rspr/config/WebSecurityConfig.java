@@ -13,7 +13,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true,
@@ -21,15 +20,14 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
         securedEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Autowired
+    UserService userService;
     @Value("${rspr.security.password-strength}")
     private int passwordStrength;
 
-    @Autowired
-    UserService userService;
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().ignoringAntMatchers("/api/**","/");
+        http.csrf().ignoringAntMatchers("/api/**", "/","/public/**");
         http.formLogin().and().httpBasic();
 
     }

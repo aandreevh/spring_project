@@ -7,10 +7,8 @@ import hykar.projects.rspr.repository.CommentRepository;
 import hykar.projects.rspr.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
-import javax.validation.constraints.NotNull;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
@@ -29,9 +27,8 @@ public class PostService {
     @Qualifier("message-compiler")
     private MessageCompiler messageCompiler;
 
-    public Collection<Post> getPostsByTag( String tag)
-    {
-        return  postRepository.findAllByTag(tag);
+    public Collection<Post> getPostsByTag(String tag) {
+        return postRepository.findAllByTag(tag);
     }
 
     public Collection<Post> getAllPosts() {
@@ -43,25 +40,30 @@ public class PostService {
 
     public Collection<Post> getPostsByUsername(String username) {
 
-        return  postRepository.findAllByUsername(username);
+        return postRepository.findAllByUsername(username);
     }
 
-    public Optional<Post> getPostById(long id) {
+    public Optional<Post> getPost(long id) {
         return postRepository.findById(id);
     }
 
-    public Post savePost(Post p)
-    {
+    public Post savePost(Post p) {
         return postRepository.save(p);
     }
 
-    public void deletePost(Post p) { postRepository.delete(p); }
+    public void deletePost(Post p) {
+        postRepository.delete(p);
+    }
 
-    public Comment saveComment(Comment c){ return commentRepository.save(c); }
+    public Comment saveComment(Comment c) {
+        return commentRepository.save(c);
+    }
 
-    public void deleteComment(Comment c){ commentRepository.delete(c);}
+    public void deleteComment(Comment c) {
+        commentRepository.delete(c);
+    }
 
-    public Optional<Comment> getCommentById(long id) {
+    public Optional<Comment> getComment(long id) {
         return commentRepository.findById(id);
     }
 }

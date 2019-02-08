@@ -4,6 +4,7 @@ import java.util.Map;
 
 public interface MessageHandler {
 
-    String handle(Map<String,String> arguments);
+    String handle(Map<String, String> arguments);
+
     String getTag();
 }

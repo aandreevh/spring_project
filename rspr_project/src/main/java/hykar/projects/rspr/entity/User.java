@@ -1,9 +1,6 @@
 package hykar.projects.rspr.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,13 +10,16 @@ import java.util.Collection;
 import java.util.LinkedList;
 
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public class User implements UserDetails {
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    Collection<Post> posts = new LinkedList<>();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(unique = true,nullable = false)
+    @Column(unique = true, nullable = false)
     private String username;
     @Column(nullable = false)
     @JsonIgnore
@@ -27,42 +27,27 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String role;
     @Column(nullable = false)
+    @JsonIgnore
     private boolean activated;
-
-    @OneToOne(mappedBy = "user",fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
+    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     @JsonIgnore
     private PersonalInformation information;
 
-    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
-    @JsonIgnore
-    Collection<Post> posts = new LinkedList<>();
-
-
-    public void setId(long id) {
-        this.id = id;
-    }
     public long getId() {
         return id;
     }
 
-    public PersonalInformation getInformation()
-    {
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public PersonalInformation getInformation() {
         return information;
     }
 
-    public void setInformation(PersonalInformation information)
-    {
+    public void setInformation(PersonalInformation information) {
         information.setUser(this);
         this.information = information;
-    }
-
-    public void setUsername(String username)
-    {
-        this.username = username;
-    }
-    public void setPassword(String password)
-    {
-        this.password = password;
     }
 
     public String getRole() {
@@ -94,9 +79,17 @@ public class User implements UserDetails {
         return password;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String getUsername() {
         return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
@@ -130,5 +123,10 @@ public class User implements UserDetails {
     public void addPost(Post post) {
         post.setUser(this);
         this.posts.add(post);
+    }
+
+    @JsonIgnore
+    public boolean isAdmin() {
+        return getRole() != null && getRole().equals("ROLE_ADMIN");
     }
 }

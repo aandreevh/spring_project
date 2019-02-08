@@ -1,13 +1,11 @@
 package hykar.projects.rspr.entity;
 
-import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="comment")
+@Table(name = "comment")
 public class Comment {
 
     @Id
@@ -20,7 +18,7 @@ public class Comment {
     private Post post;
 
     @ManyToOne
-    @JoinColumn(name="user")
+    @JoinColumn(name = "user")
     @JsonIgnore
     private User user;
 

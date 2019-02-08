@@ -2,15 +2,21 @@ package hykar.projects.rspr.enums;
 
 public enum TokenType {
 
-    ACTIVATION("ACTIVATION",0);
+    ACTIVATION("ACTIVATION", 0);
 
     private int type;
     private String typeName;
 
-     TokenType(String typeName,int type)
-    {
+    TokenType(String typeName, int type) {
         this.typeName = typeName;
         this.type = type;
+    }
+
+    public static TokenType resolveTokenType(int type) {
+        for (TokenType t : TokenType.values())
+            if (t.type == type) return t;
+
+        return null;
     }
 
     public int getType() {
@@ -19,13 +25,5 @@ public enum TokenType {
 
     public String getTypeName() {
         return typeName;
-    }
-
-    public static TokenType resolveTokenType(int type)
-    {
-        for(TokenType t : TokenType.values())
-            if(t.type == type) return t;
-
-        return null;
     }
 }
