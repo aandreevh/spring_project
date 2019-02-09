@@ -28,7 +28,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().ignoringAntMatchers("/api/**", "/","/public/**");
-        http.formLogin().and().httpBasic();
+        http.formLogin()
+                .loginPage("/login")
+                .usernameParameter("username")
+                .passwordParameter("password")
+                .defaultSuccessUrl("/login_success")
+                .failureUrl("/login_fail")
+                .and().httpBasic();
 
     }
 

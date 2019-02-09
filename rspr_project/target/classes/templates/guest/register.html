@@ -1,0 +1,53 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body style="padding-top: 70px; padding-bottom: 50px">
+
+
+<div th:replace="guest/fragments/header :: header"></div>
+
+<div class="container align-middle h-100 w-100" style="overflow-y: auto">
+    <div th:replace="fragments/error :: error"></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 p-4 border rounded border-dark">
+
+            <strong class="p-2">Register</strong>
+            <hr>
+            <div class="text-center">
+                <form th:action="@{/register}" th:object="${user}" method="post">
+                    <label class="text-left" for="username">Username</label>
+                    <input type="text" id="username" name="username" autofocus="autofocus"  th:field="*{username}"/>
+
+                   <br>
+                    <label class="text-left" for="password">Password</label>
+                    <input type="password" id="password" name="password" th:field="*{password}" />
+
+                    <br>
+                    <label class="text-left" for="password">Password</label>
+                    <input name="password_confirm" required="required" type="password"
+                           id="password_confirm" oninput="check(this)" />
+
+                    <script language='javascript' type='text/javascript'>
+                        function check(input) {
+                            if (input.value != document.getElementById('password').value) {
+                                input.setCustomValidity('Password Must be Matching.');
+                            } else {
+                                input.setCustomValidity('');
+                            }
+                        }
+                    </script>
+                    <br>
+                    <input  class="btn btn-dark" type="submit" value="Register" />
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+
+</body>
+</html>

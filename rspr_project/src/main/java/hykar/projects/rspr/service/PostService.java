@@ -7,6 +7,7 @@ import hykar.projects.rspr.repository.CommentRepository;
 import hykar.projects.rspr.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -23,9 +24,6 @@ public class PostService {
     @Autowired
     private CommentRepository commentRepository;
 
-    @Autowired
-    @Qualifier("message-compiler")
-    private MessageCompiler messageCompiler;
 
     public Collection<Post> getPostsByTag(String tag) {
         return postRepository.findAllByTag(tag);

@@ -1,0 +1,15 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="error"  th:if="${error}" class="row justify-content-center">
+        <div class="col-xl-8 alert alert-danger alert-dismissible fade show text-center m-2" role="alert">
+            <button class="close" type="button" data-dismiss="alert">×</button>
+            <snap th:text="${error}"></snap>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+</head>
+
+<body>
+
+    <div th:fragment="header" class="bg-dark fixed-top" >
+            <nav class="navbar">
+                <a class="nav-link text-white bg-dark w-25 text-center" th:href="@{/}">Home</a>
+                <a class="nav-link text-white bg-dark w-25 text-center" th:href="@{/login}">Login</a>
+                <a class="nav-link text-white bg-dark w-25 text-center"  th:href="@{/register}">Register</a>
+                <a class="nav-link text-white bg-dark w-25 text-center"  th:href="@{/about}">About</a>
+            </nav>
+    </div>
+
+</body>
+
+</html>
