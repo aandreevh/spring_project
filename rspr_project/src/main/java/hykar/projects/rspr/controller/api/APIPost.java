@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.Optional;
 
 @RestController
@@ -64,14 +65,17 @@ public class APIPost {
 
     @PostMapping("/api/post")
     @Secured({"ROLE_ADMIN", "ROLE_USER"})
-    public ResponseEntity apiAddPost(@RequestParam String message,
+    public ResponseEntity apiAddPost(@RequestParam String title,
+                                     @RequestParam String message,
                                      @RequestParam(required = false) String tags) {
 
         User currentUser = userService.getCurrentUser().get();
         Post p = new Post();
 
+        p.setTitle(title);
         p.setUser(currentUser);
         p.setMessage(message);
+        p.setCreated(new Date());
 
         if (tags != null) p.setTags(tags);
         else p.setTags("");
@@ -161,6 +165,7 @@ public class APIPost {
         c.setUser(currentUser);
         c.setPost(p);
         c.setMessage(message);
+        c.setCreated(new Date());
 
         return new ResponseEntity<>(postService.saveComment(c), HttpStatus.OK);
     }

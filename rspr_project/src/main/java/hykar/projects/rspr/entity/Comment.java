@@ -3,6 +3,7 @@ package hykar.projects.rspr.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "comment")
@@ -24,6 +25,10 @@ public class Comment {
 
     @Column(length = 2000)
     private String message;
+
+    @Column
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date created;
 
     public long getId() {
         return id;
@@ -55,5 +60,13 @@ public class Comment {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
     }
 }

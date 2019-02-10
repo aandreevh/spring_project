@@ -1,0 +1,68 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body style="padding-top: 70px; padding-bottom: 50px">
+
+
+<div th:replace="user/fragments/header :: header"></div>
+
+<div class="container align-middle h-100 w-100" style="overflow-y: auto">
+    <div th:replace="fragments/messages :: messages"></div>
+
+
+    <div class="row justify-content-between">
+        <div class="col-md-3"></div>
+        <div class="col-md-4 col-8 align-self-center text-left">
+            <strong class="p-2" th:text="'Information about '+ ${_user.username}"></strong>
+        </div>
+        <div class="col-md-2 col-4">
+            <a class="btn btn-dark btn-block text-white p-2" th:href="${'/posts/?username='+_user.username}">Posts</a>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <hr>
+
+    <div class="row justify-content-center" style="margin-top: 2em">
+
+        <div class="col-md-6 p-4 border rounded border-dark">
+            <div class="text-center">
+                <div  class="m-1 p-4"  method="post">
+
+
+
+                    <div class="block">
+                        <label class="text-left">Name</label>
+                        <input readonly  th:value="${_user.information.name}" />
+                        <br>
+                    </div>
+
+                    <div class="block">
+                        <label class="text-left">City</label>
+                        <input readonly  th:value="${_user.information.city}" />
+                        <br>
+                    </div>
+                    <br>
+
+                    <label class="text-left" >Favourite Species</label>
+                    <br>
+
+                    <textarea class="col-12 col-md-8" rows="10" readonly
+                              th:text="${_user.information.favouriteSpecies}" id="favouriteSpecies" name="favouriteSpecies">
+                    </textarea>
+                    <br>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+
+</body>
+</html>

@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class MessageCompiler {
 
-    private static final Pattern PATTERN_TAG = Pattern.compile("!(\\w+)\\[\\s*(\\w+\\s*=\\s*\".*\"\\s*,?\\s*)*\\]");
+    private static final Pattern PATTERN_TAG = Pattern.compile("(\\w+)\\[\\s*(\\w+\\s*=\\s*\".*\"\\s*,?\\s*)*\\]");
     private static final Pattern PATTERN_TAG_ARGUMENTS = Pattern.compile("\\s*(\\w+)\\s*=\\s*\"([^\"]*)\"");
     private HashMap<String, MessageHandler> handlers;
 

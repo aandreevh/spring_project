@@ -1,0 +1,69 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body style="padding-top: 70px; padding-bottom: 50px">
+
+
+<div th:replace="user/fragments/header :: header"></div>
+
+<div class="container h-100 justify-content-center w-00" style="overflow-y: auto">
+    <div th:replace="fragments/messages :: messages"></div>
+
+    <div class="row">
+        <div class="col-12">
+
+            <table class="table table-dark table-striped">
+                <thead>
+
+                <tr>
+                    <th width="15%"> Time Created</th>
+                    <th class="text-center" width="20%"> Creator </th>
+                    <th width="45%"> Title</th>
+                    <th width="10%"> Tags</th>
+                    <th width="10%"> Actions</th>
+                </tr>
+
+                </thead>
+
+                <tbody>
+                <tr>
+                    <form method="get">
+                        <td><input type="datetime-local" name="date" ></td>
+                    <td><input type="text" th:value="${_username}" name="username"/></td>
+                    <td><input type="text" th:value="${_title}" name="title"/></td>
+                    <td><input type="text" th:value="${_tag}" name="tag"/></td>
+                    <td><input class="btn btn-success" type="submit" value="Search"/></td>
+                    </form>
+                </tr>
+                <!--/*@thymesVar id="post" type="hykar.projects.rspr.entity.Post"*/-->
+                <th:block th:each="post : ${posts}">
+
+                    <tr>
+                        <td th:text="${post.created}"></td>
+                        <td th:text="${post.user.username}"></td>
+                        <td th:text="${post.title}"></td>
+                        <td th:text="${post.tags}"></td>
+                        <td>
+                            <a class="btn btn-danger" th:href="${'/post/remove/'+ post.id}" th:if="${user.isAdmin() || user.id == post.user.id}">Remove</a>
+                            <a class="btn btn-primary" th:href="${'/post/view/'+ post.id}">View</a>
+
+                        </td>
+                    </tr>
+
+                </th:block>
+
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+
+</body>
+</html>

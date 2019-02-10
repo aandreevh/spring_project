@@ -2,69 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0124522-a5e7-4a45-a689-fc10896ed539" name="Default" comment="New Update">
-      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/controllers/GuestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/controllers/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/activate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/fragments/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/posts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/users.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/view_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/visit_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.~lock.Course_Spring_5_Project_Summary.docx#" beforeDir="false" afterPath="$PROJECT_DIR$/.~lock.Course_Spring_5_Project_Summary.docx#" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/rspr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/rspr.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course_Spring_5_Project_Summary.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Course_Spring_5_Project_Summary.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/MessageCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/MessageCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/handler/HtmlImageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/handler/HtmlImageHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/public/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/bootstrap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/header_guest.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/api/APIPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/api/APIPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/controllers/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/controllers/GuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/public/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/templates/fragments/bootstrap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/templates/fragments/header_guest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/controller/api/APIPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/controller/api/APIPost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/controller/controllers/GuestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/controller/controllers/GuestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/entity/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/hykar/projects/rspr/entity/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/templates/fragments/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/templates/fragments/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/templates/guest/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/templates/guest/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/templates/guest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/templates/guest/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/templates/guest/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/templates/guest/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rspr_project/target/classes/templates/guest/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/rspr_project/target/classes/templates/guest/register.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/rspr_project/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,50 +48,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/index.html">
+        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/controllers/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="-242">
+              <caret line="196" column="52" selection-start-line="196" selection-start-column="52" selection-end-line="196" selection-end-column="52" />
               <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/new_post.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/login.html">
+        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/view_post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/WebSecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="22" column="93" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
+            <state relative-caret-position="128">
+              <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#td#2;n#form#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#2;n#tr#0;n#th:block#0;n#tbody#0;n#table#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#td#2;n#tr#0;n#th:block#0;n#tbody#0;n#table#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,54 +85,69 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/head.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/fragments/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="93" selection-start-line="12" selection-start-column="93" selection-end-line="12" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/controllers/GuestController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+            <state relative-caret-position="113">
+              <caret line="43" column="20" lean-forward="true" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#361#362#0" expanded="true" />
-                <element signature="e#402#403#0" expanded="true" />
-                <element signature="e#463#464#0" expanded="true" />
-                <element signature="e#504#505#0" expanded="true" />
+                <element signature="e#1273#1274#0" expanded="true" />
+                <element signature="e#1307#1308#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/WebMvcConfig.java">
+        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/handler/MessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+            <state relative-caret-position="60">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/Post.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#916#917#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#1007#1008#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+                <element signature="e#1396#1397#0" expanded="true" />
+                <element signature="e#1472#1473#0" expanded="true" />
+                <element signature="e#1729#1730#0" expanded="true" />
+                <element signature="e#1757#1758#0" expanded="true" />
+                <element signature="e#1799#1800#0" expanded="true" />
+                <element signature="e#1833#1834#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/converter/CommentConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/MessageCompiler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/handler/HtmlImageHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -200,11 +173,29 @@
       <find>fragment</find>
       <find>MessageCom</find>
       <find>reg</find>
+      <find>save</find>
+      <find>textarea</find>
+      <find>posts/v</find>
+      <find>/post</find>
+      <find>posts</find>
+      <find>/posts</find>
+      <find>/post/re</find>
+      <find>remove</find>
+      <find>sys</find>
+      <find>getCreate</find>
+      <find>afte</find>
+      <find>/user/{</find>
+      <find>/post/view</find>
+      <find>/post/{</find>
+      <find>/user/de</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>fragments</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/rspr_project/src/main/resources/templates/user</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -213,8 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/RepositoryRestConfig.java" />
-        <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/converter/UserConverter.java" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/converter/RestConverter.java" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/converter/UserConverter.java" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/User.java" />
@@ -226,7 +215,6 @@
         <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/converter/CommentConverter.java" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/api/APIUser.java" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/converter/PostConverter.java" />
-        <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/api/APIPost.java" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/resources/views/base/base.html" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/resources/views/index.html" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/resources/application.properties" />
@@ -243,14 +231,30 @@
         <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/error.html" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/bootstrap.html" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/footer.html" />
-        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/head.html" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/index.html" />
-        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/fragments/header.html" />
-        <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/about.html" />
-        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/login.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/messages.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/activate.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/fragments/header.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/index.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/Comment.java" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/api/APIPost.java" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/register.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/users.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/fragments/header.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/login.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/user.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/visit_user.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/edit_post.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/posts.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/head.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/MessageCompiler.java" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/Post.java" />
         <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/controllers/GuestController.java" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/handler/HtmlImageHandler.java" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/view_post.html" />
+        <option value="$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/controllers/UserController.java" />
       </list>
     </option>
   </component>
@@ -327,6 +331,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="rspr" type="462c0819:PsiDirectoryNode" />
+              <item name="compiler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring_project" type="462c0819:PsiDirectoryNode" />
+              <item name="rspr_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rspr" type="462c0819:PsiDirectoryNode" />
+              <item name="compiler" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring_project" type="462c0819:PsiDirectoryNode" />
+              <item name="rspr_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rspr" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -359,6 +384,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="rspr" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring_project" type="462c0819:PsiDirectoryNode" />
+              <item name="rspr_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rspr" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -377,6 +413,16 @@
               <item name="rspr_project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rspr" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring_project" type="462c0819:PsiDirectoryNode" />
+              <item name="rspr_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -417,6 +463,27 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="guest" type="462c0819:PsiDirectoryNode" />
+              <item name="fragments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring_project" type="462c0819:PsiDirectoryNode" />
+              <item name="rspr_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring_project" type="462c0819:PsiDirectoryNode" />
+              <item name="rspr_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
               <item name="fragments" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -432,7 +499,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549670874002" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549831978753" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -513,16 +580,15 @@
       <option name="presentableId" value="Default" />
       <updated>1549614223718</updated>
       <workItem from="1549614224898" duration="18443000" />
-      <workItem from="1549637917661" duration="26873000" />
+      <workItem from="1549637917661" duration="66584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45316000" />
+    <option name="totallyTimeSpent" value="85027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1368" height="717" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -535,14 +601,14 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3281787" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.3281787" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933443" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3298969" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007576" side_tool="true" weight="0.3281787" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3281787" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3298969" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -557,7 +623,7 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32954547" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,29 +634,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="New Update" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rspr_project/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE.jar!/org/springframework/http/ResponseEntity.class" />
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/RepositoryRestConfig.java" />
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/service/TokenService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/lang/annotation/Documented.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.3.RELEASE/spring-context-5.1.3.RELEASE.jar!/org/springframework/stereotype/Indexed.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.3.RELEASE/spring-context-5.1.3.RELEASE.jar!/org/springframework/stereotype/Component.class" />
     <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/api/APIUser.java">
@@ -600,13 +643,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="85" column="68" selection-start-line="85" selection-start-column="68" selection-end-line="85" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -634,23 +670,6 @@
           <folding>
             <element signature="e#678#679#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/api/APIPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="146" selection-start-line="146" selection-end-line="146" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/converter/CommentConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -695,16 +714,6 @@
     <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/error.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/service/PostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/public/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -714,13 +723,6 @@
     <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/public/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/error.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -728,21 +730,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/head.html">
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/index.html">
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/messages.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="81" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/activate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -756,61 +768,277 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/WebSecurityConfig.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.2.RELEASE/spring-security-web-5.1.2.RELEASE.jar!/org/springframework/security/web/util/matcher/AndRequestMatcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+          <caret line="14" column="10" lean-forward="true" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/api/APIPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/PersonalInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/validator/hibernate-validator/6.0.13.Final/hibernate-validator-6.0.13.Final.jar!/org/hibernate/validator/constraints/br/CPF.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/validator/hibernate-validator/6.0.13.Final/hibernate-validator-6.0.13.Final.jar!/org/hibernate/validator/internal/constraintvalidators/hv/NotBlankValidator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="31" column="74" selection-end-line="54" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/fragments/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="93" selection-start-line="12" selection-start-column="93" selection-end-line="12" selection-end-column="93" />
+        <state relative-caret-position="150">
+          <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/about.html">
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/fragments/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        <state relative-caret-position="69">
+          <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        <state relative-caret-position="45">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/User.java">
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="113">
+          <caret line="43" column="30" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/visit_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.2.RELEASE/spring-security-core-5.1.2.RELEASE.jar!/org/springframework/security/access/annotation/Secured.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/posts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/fragments/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="86" selection-start-line="15" selection-start-column="86" selection-end-line="15" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="39" column="90" lean-forward="true" selection-start-line="39" selection-start-column="90" selection-end-line="39" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+          <folding>
+            <element signature="e#1163#1164#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+            <element signature="e#1245#1246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/MessageCompiler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/handler/HtmlImageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/guest/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="22" column="93" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
+        <state relative-caret-position="-180">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="43" column="20" lean-forward="true" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+          <folding>
+            <element signature="e#1273#1274#0" expanded="true" />
+            <element signature="e#1307#1308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/view_post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#td#2;n#form#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#th:block#0;n#tbody#0;n#table#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#2;n#tr#0;n#th:block#0;n#tbody#0;n#table#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/entity/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+          <folding>
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1729#1730#0" expanded="true" />
+            <element signature="e#1757#1758#0" expanded="true" />
+            <element signature="e#1799#1800#0" expanded="true" />
+            <element signature="e#1833#1834#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/service/PostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1683#1684#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/config/converter/CommentConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/controllers/GuestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        <state relative-caret-position="121">
+          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/compiler/handler/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/java/hykar/projects/rspr/controller/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-242">
+          <caret line="196" column="52" selection-start-line="196" selection-start-column="52" selection-end-line="196" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspr_project/src/main/resources/templates/user/new_post.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

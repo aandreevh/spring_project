@@ -1,0 +1,26 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+</head>
+
+<body>
+
+<div th:fragment="header" class="bg-dark fixed-top" >
+    <!--/*@thymesVar id="user" type="hykar.projects.rspr.entity.User"*/-->
+    <nav th:if="${user.isAdmin()}" class="navbar">
+        <a class="nav-link text-white bg-dark w-25 text-center" th:href="@{/user}">User</a>
+        <a class="nav-link text-white bg-dark w-25 text-center" th:href="@{/users}">Users</a>
+        <a class="nav-link text-white bg-dark w-25 text-center" th:href="@{/posts}">Posts</a>
+        <a class="nav-link text-white bg-dark w-25 text-center"  th:href="@{/logout}">Logout</a>
+    </nav>
+    <nav th:if="${!user.isAdmin()}" class="navbar">
+        <a class="nav-link text-white bg-dark w-25 text-center" th:href="@{/user}">User</a>
+        <a class="nav-link text-white bg-dark w-25 text-center" th:href="@{/posts}">Posts</a>
+        <a class="nav-link text-white bg-dark w-25 text-center"  th:href="@{/logout}">Logout</a>
+    </nav>
+</div>
+
+</body>
+
+</html>

@@ -2,9 +2,11 @@ package hykar.projects.rspr.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import hykar.projects.rspr.compiler.MessageCompiler;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.Date;
 
 @Entity
 @Table(name = "post")
@@ -14,11 +16,18 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    @Column(nullable = false)
-    String message;
+    @Column(nullable = false,length = 5000)
+    private String message;
 
     @Column(nullable = false)
-    String tags;
+    private String tags;
+
+    @Column
+    private String title;
+
+    @Column
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date created;
 
     @ManyToOne
     @JoinColumn(name = "user")
@@ -58,6 +67,10 @@ public class Post {
         this.message = message;
     }
 
+    public String getCompiledMessage(){
+        return MessageCompiler.createDefault().compile(this.message);
+    }
+
     public String getTags() {
         return tags;
     }
@@ -74,5 +87,19 @@ public class Post {
         this.user = user;
     }
 
+    public Date getCreated() {
+        return created;
+    }
 
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }

@@ -6,7 +6,7 @@
 <div th:replace="guest/fragments/header :: header"></div>
 
 <div class="container align-middle h-100 w-100" style="overflow-y: auto">
-    <div th:replace="fragments/error :: error"></div>
+    <div th:replace="fragments/messages :: messages"></div>
 
     <div class="row justify-content-center">
         <div class="col-md-6 p-4 border rounded border-dark">
@@ -14,16 +14,16 @@
             <strong class="p-2">Register</strong>
             <hr>
             <div class="text-center">
-                <form th:action="@{/register}" th:object="${user}" method="post">
+                <form th:action="@{/register}"  method="post">
                     <label class="text-left" for="username">Username</label>
-                    <input type="text" id="username" name="username" autofocus="autofocus"  th:field="*{username}"/>
+                    <input type="text" id="username" name="username" autofocus="autofocus"/>
 
                    <br>
                     <label class="text-left" for="password">Password</label>
-                    <input type="password" id="password" name="password" th:field="*{password}" />
+                    <input type="password" id="password" name="password"/>
 
                     <br>
-                    <label class="text-left" for="password">Password</label>
+                    <label class="text-left" for="password">Repeat Password</label>
                     <input name="password_confirm" required="required" type="password"
                            id="password_confirm" oninput="check(this)" />
 
