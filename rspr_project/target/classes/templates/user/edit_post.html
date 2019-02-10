@@ -1,0 +1,59 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+
+<!--/*@thymesVar id="post" type="hykar.projects.rspr.entity.Post"*/-->
+<!--/*@thymesVar id="user" type="hykar.projects.rspr.entity.User"*/-->
+<!--/*@thymesVar id="comment" type="hykar.projects.rspr.entity.Comment"*/-->
+<body style="padding-top: 70px; padding-bottom: 50px">
+
+
+<div th:replace="user/fragments/header :: header"></div>
+
+<div class="container h-100 w-100" style="overflow-y: auto">
+    <div th:replace="fragments/messages :: messages"></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 p-4 border rounded border-dark">
+
+            <strong class="p-2">Edit Post</strong>
+            <hr>
+            <div class="text-center">
+                <form th:action="@{'/post/edit/'+${post.id}}" th:object="${post}" class="m-1 p-4"  method="post">
+
+                    <div class="block">
+                        <label class="text-left">Title</label>
+                        <input autofocus="autofocus" th:value="*{title}" name="title" type="text"/>
+                        <br>
+                    </div>
+
+
+                    <div class="block">
+                        <label class="text-left">Tags</label>
+                        <input autofocus="autofocus" th:value="*{tags}" name="tags" type="text"/>
+                        <br>
+                    </div>
+
+                    <label class="text-left">Message</label>
+                    <br>
+
+                    <textarea class="col-12 col-md-8" rows="20"
+                              th:text="*{message}" name="message">
+                    </textarea>
+                    <br>
+
+                    <input  class="btn btn-dark" type="submit" value="Edit" />
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+
+</body>
+</html>

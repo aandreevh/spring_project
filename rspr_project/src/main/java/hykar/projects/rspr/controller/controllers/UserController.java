@@ -261,4 +261,82 @@ public class UserController {
         return "redirect:/post/view/"+comment.get().getPost().getId();
 
     }
+
+    @GetMapping("/post/create")
+    @Secured({"ROLE_USER","ROLE_ADMIN"})
+    public String createPostActionGet(Model model){
+        model.addAttribute("user",service.getCurrentUser().get());
+        model.addAttribute("post",new Post());
+        return "user/new_post";
+    }
+
+    @PostMapping("/post/create")
+    @Secured({"ROLE_USER","ROLE_ADMIN"})
+    public String createPostAction(@ModelAttribute Post post,Model model, RedirectAttributes attributes){
+        User user = service.getCurrentUser().get();
+
+        post.setUser(user);
+        post.setCreated(new Date());
+
+        postService.savePost(post);
+
+        attributes.addFlashAttribute("message","Post created.");
+
+        return "redirect:/post/view/"+post.getId();
+    }
+
+    @GetMapping("/post/edit/{post}")
+    @Secured({"ROLE_USER","ROLE_ADMIN"})
+    public String editPostActionGet(@PathVariable("post") Optional<Post> post,
+                                    Model model,RedirectAttributes attributes){
+
+        User user = service.getCurrentUser().get();
+        model.addAttribute("user",user);
+
+        if(post.isEmpty()){
+            attributes.addFlashAttribute("error","Post does not exist.");
+            return "redirect:/posts";
+        }
+        if(user.isAdmin() || post.get().getUser().getId() == user.getId()) {
+            model.addAttribute("post", post.get());
+            return "user/edit_post";
+
+        }
+
+        attributes.addFlashAttribute("error","You cannot edit this post.");
+        return "redirect:/posts";
+
+
+    }
+
+    @PostMapping("/post/edit/{post}")
+    @Secured({"ROLE_USER","ROLE_ADMIN"})
+    public String editPostAction(@PathVariable("post")Optional<Post> oPost,
+                                 @ModelAttribute("tags")String tags,@ModelAttribute("message")String message,
+                                 @ModelAttribute("title")String title,Model model,RedirectAttributes attributes){
+        User user = service.getCurrentUser().get();
+        model.addAttribute("user",user);
+
+        if(oPost.isEmpty()){
+            attributes.addFlashAttribute("error","Post not found !");
+            return "redirect:/post/view";
+        }
+        Post post = oPost.get();
+
+        if(user.isAdmin() || post.getUser().getId() == user.getId()) {
+
+            post.setMessage(message);
+            post.setTags(tags);
+            post.setTitle(title);
+
+            postService.savePost(post);
+            attributes.addFlashAttribute("message","Post edited.");
+            return "redirect:/post/view/"+post.getId();
+
+        }
+
+        attributes.addFlashAttribute("error","You cannot edit this post.");
+        return "redirect:/posts";
+
+    }
 }

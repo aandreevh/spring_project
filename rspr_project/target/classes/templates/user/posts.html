@@ -44,6 +44,7 @@
                         <td th:text="${post.tags}"></td>
                         <td>
                             <a class="btn btn-danger" th:href="${'/post/remove/'+ post.id}" th:if="${user.isAdmin() || user.id == post.user.id}">Remove</a>
+                            <a class="btn btn-success" th:href="${'/post/edit/'+ post.id}" th:if="${user.isAdmin() || user.id == post.user.id}">Edit</a>
                             <a class="btn btn-primary" th:href="${'/post/view/'+ post.id}">View</a>
 
                         </td>

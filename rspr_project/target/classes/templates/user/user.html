@@ -11,7 +11,7 @@
     <div class="row justify-content-center">
         <div class="col-lg-6">
             <p class="text-center" th:text="'Welcome, '+${user.username}"> </p>
-            <a class="btn btn-block btn-dark text-white">New Post</a>
+            <a class="btn btn-block btn-dark text-white" th:href="@{/post/create}">New Post</a>
         </div>
     </div>
 
